@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTViewController : UITabBarController
+@interface PTViewController : UIViewController
+
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTGroupsViewController : UIViewController
+@interface PTGroupsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

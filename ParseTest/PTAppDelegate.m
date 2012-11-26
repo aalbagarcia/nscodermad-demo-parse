@@ -13,11 +13,14 @@
 @implementation PTAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    PTGroupsViewController *groupsVC = [[PTGroupsViewController alloc] initWithNibName:@"PTGroupsViewController" bundle:nil];
+/*    PTGroupsViewController *groupsVC = [[PTGroupsViewController alloc] initWithNibName:@"PTGroupsViewController" bundle:nil];
     PTPeopleViewController *peopleVC = [[PTPeopleViewController alloc] initWithNibName:@"PTPeopleViewController" bundle:nil];
+ 
+    self.viewController.viewControllers = @[groupsVC, peopleVC];
+    self.window.rootViewController = self.viewController;
+*/
     
     self.viewController = [[PTViewController alloc] init];
-    self.viewController.viewControllers = @[groupsVC, peopleVC];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

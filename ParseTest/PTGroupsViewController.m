@@ -12,12 +12,16 @@
 
 @end
 
-@implementation PTGroupsViewController
+@implementation PTGroupsViewController {
+    NSArray *groups;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        [self.tableView registerNib:[UINib nibWithNibName:@"StandardTableViewCell" bundle:nil] forCellReuseIdentifier:@"StandardCell"];
+        groups = [NSArray arrayWithObjects:@"grupo1",@"grupo2", nil];
         self.title = @"Groups";
         self.tabBarItem.image = [UIImage imageNamed:@"groups"];
     }
@@ -36,4 +40,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [groups count];
+}
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StandardCell" forIndexPath:indexPath];
+    cell.textLabel.text = [groups objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = @"caca";
+    return cell;
+}
 @end

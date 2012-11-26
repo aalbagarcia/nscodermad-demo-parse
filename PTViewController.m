@@ -7,6 +7,9 @@
 //
 
 #import "PTViewController.h"
+#import "PTGroupsNavController.h"
+#import "PTPeopleViewController.h"
+#import "PTGroupsViewController.h"
 
 @interface PTViewController ()
 
@@ -18,7 +21,13 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.tabBarController = [[UITabBarController alloc] init];
+        PTGroupsViewController *groupsVC = [[PTGroupsViewController alloc] initWithNibName:@"PTGroupsViewController" bundle:nil];
+        UINavigationController *navigationController = [[PTGroupsNavController alloc] initWithRootViewController:groupsVC];
+        PTPeopleViewController *peopleVC = [[PTPeopleViewController alloc] initWithNibName:@"PTPeopleViewController" bundle:nil];
+        
+        self.tabBarController.viewControllers = [NSArray arrayWithObjects:navigationController, peopleVC, nil];
+        [self.view addSubview:self.tabBarController.view];
     }
     return self;
 }
