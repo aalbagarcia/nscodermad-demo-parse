@@ -18,6 +18,7 @@
 		AC88AD0E1663AF29000D05F0 /* StandardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD0D1663AF29000D05F0 /* StandardTableViewCell.xib */; };
 		AC88AD1C1663F778000D05F0 /* PTGroupsNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88AD1B1663F778000D05F0 /* PTGroupsNavController.m */; };
 		AC88AD201663FE66000D05F0 /* PTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD1F1663FE66000D05F0 /* PTViewController.xib */; };
+		AC88AD2216643895000D05F0 /* circle_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD2116643895000D05F0 /* circle_plus.png */; };
 		ACCEA248165FAC1500BC3BB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEA247165FAC1500BC3BB8 /* UIKit.framework */; };
 		ACCEA24A165FAC1500BC3BB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEA249165FAC1500BC3BB8 /* Foundation.framework */; };
 		ACCEA24C165FAC1500BC3BB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEA24B165FAC1500BC3BB8 /* CoreGraphics.framework */; };
@@ -60,6 +61,7 @@
 		AC88AD1A1663F778000D05F0 /* PTGroupsNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGroupsNavController.h; sourceTree = "<group>"; };
 		AC88AD1B1663F778000D05F0 /* PTGroupsNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGroupsNavController.m; sourceTree = "<group>"; };
 		AC88AD1F1663FE66000D05F0 /* PTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTViewController.xib; sourceTree = "<group>"; };
+		AC88AD2116643895000D05F0 /* circle_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_plus.png; sourceTree = "<group>"; };
 		ACCEA243165FAC1500BC3BB8 /* ParseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCEA247165FAC1500BC3BB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACCEA249165FAC1500BC3BB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,6 +164,7 @@
 			children = (
 				AC88AD0B16639BA2000D05F0 /* users.png */,
 				AC88AD051662B4A1000D05F0 /* groups.png */,
+				AC88AD2116643895000D05F0 /* circle_plus.png */,
 				ACCEA24F165FAC1500BC3BB8 /* ParseTest-Info.plist */,
 				ACCEA250165FAC1500BC3BB8 /* InfoPlist.strings */,
 				ACCEA253165FAC1500BC3BB8 /* main.m */,
@@ -276,6 +279,7 @@
 				AC88AD0C16639BA2000D05F0 /* users.png in Resources */,
 				AC88AD0E1663AF29000D05F0 /* StandardTableViewCell.xib in Resources */,
 				AC88AD201663FE66000D05F0 /* PTViewController.xib in Resources */,
+				AC88AD2216643895000D05F0 /* circle_plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

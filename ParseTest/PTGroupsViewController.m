@@ -24,6 +24,9 @@
         groups = [NSArray arrayWithObjects:@"grupo1",@"grupo2", nil];
         self.title = @"Groups";
         self.tabBarItem.image = [UIImage imageNamed:@"groups"];
+        UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"circle_plus.png"] style:UIBarButtonSystemItemAdd target:self action:@selector(addGroup)];
+        self.navigationItem.rightBarButtonItem = addGroupButton;
+
     }
     return self;
 }
@@ -47,7 +50,13 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StandardCell" forIndexPath:indexPath];
     cell.textLabel.text = [groups objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = @"caca";
+    cell.detailTextLabel.text = @"";
     return cell;
+}
+
+
+- (void) addGroup
+{
+    NSLog(@"Add group button pressed");
 }
 @end
