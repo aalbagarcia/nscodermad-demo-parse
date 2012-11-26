@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AC88AC97166286DB000D05F0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88AC96166286DB000D05F0 /* MainWindow.xib */; };
+		AC88ACF91662AA7E000D05F0 /* PTGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88ACF71662AA7D000D05F0 /* PTGroupsViewController.m */; };
+		AC88ACFA1662AA7E000D05F0 /* PTGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88ACF81662AA7D000D05F0 /* PTGroupsViewController.xib */; };
+		AC88ACFE1662AB8E000D05F0 /* PTPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88ACFC1662AB8E000D05F0 /* PTPeopleViewController.m */; };
+		AC88ACFF1662AB8E000D05F0 /* PTPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88ACFD1662AB8E000D05F0 /* PTPeopleViewController.xib */; };
+		AC88AD041662AD20000D05F0 /* PTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88AD031662AD20000D05F0 /* PTViewController.m */; };
+		AC88AD061662B4A1000D05F0 /* groups.png in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD051662B4A1000D05F0 /* groups.png */; };
+		AC88AD0C16639BA2000D05F0 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD0B16639BA2000D05F0 /* users.png */; };
 		ACCEA248165FAC1500BC3BB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEA247165FAC1500BC3BB8 /* UIKit.framework */; };
 		ACCEA24A165FAC1500BC3BB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEA249165FAC1500BC3BB8 /* Foundation.framework */; };
 		ACCEA24C165FAC1500BC3BB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEA24B165FAC1500BC3BB8 /* CoreGraphics.framework */; };
@@ -36,6 +43,16 @@
 
 /* Begin PBXFileReference section */
 		AC88AC96166286DB000D05F0 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		AC88ACF61662AA7D000D05F0 /* PTGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGroupsViewController.h; sourceTree = "<group>"; };
+		AC88ACF71662AA7D000D05F0 /* PTGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGroupsViewController.m; sourceTree = "<group>"; };
+		AC88ACF81662AA7D000D05F0 /* PTGroupsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTGroupsViewController.xib; sourceTree = "<group>"; };
+		AC88ACFB1662AB8E000D05F0 /* PTPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPeopleViewController.h; sourceTree = "<group>"; };
+		AC88ACFC1662AB8E000D05F0 /* PTPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTPeopleViewController.m; sourceTree = "<group>"; };
+		AC88ACFD1662AB8E000D05F0 /* PTPeopleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTPeopleViewController.xib; sourceTree = "<group>"; };
+		AC88AD021662AD20000D05F0 /* PTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTViewController.h; path = ../PTViewController.h; sourceTree = "<group>"; };
+		AC88AD031662AD20000D05F0 /* PTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTViewController.m; path = ../PTViewController.m; sourceTree = "<group>"; };
+		AC88AD051662B4A1000D05F0 /* groups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groups.png; path = ../groups.png; sourceTree = "<group>"; };
+		AC88AD0B16639BA2000D05F0 /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
 		ACCEA243165FAC1500BC3BB8 /* ParseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCEA247165FAC1500BC3BB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACCEA249165FAC1500BC3BB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,9 +131,17 @@
 		ACCEA24D165FAC1500BC3BB8 /* ParseTest */ = {
 			isa = PBXGroup;
 			children = (
+				AC88AD021662AD20000D05F0 /* PTViewController.h */,
+				AC88AD031662AD20000D05F0 /* PTViewController.m */,
 				ACCEA256165FAC1500BC3BB8 /* PTAppDelegate.h */,
 				ACCEA257165FAC1500BC3BB8 /* PTAppDelegate.m */,
 				ACCEA24E165FAC1500BC3BB8 /* Supporting Files */,
+				AC88ACF61662AA7D000D05F0 /* PTGroupsViewController.h */,
+				AC88ACF71662AA7D000D05F0 /* PTGroupsViewController.m */,
+				AC88ACF81662AA7D000D05F0 /* PTGroupsViewController.xib */,
+				AC88ACFB1662AB8E000D05F0 /* PTPeopleViewController.h */,
+				AC88ACFC1662AB8E000D05F0 /* PTPeopleViewController.m */,
+				AC88ACFD1662AB8E000D05F0 /* PTPeopleViewController.xib */,
 			);
 			path = ParseTest;
 			sourceTree = "<group>";
@@ -124,6 +149,8 @@
 		ACCEA24E165FAC1500BC3BB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AC88AD0B16639BA2000D05F0 /* users.png */,
+				AC88AD051662B4A1000D05F0 /* groups.png */,
 				ACCEA24F165FAC1500BC3BB8 /* ParseTest-Info.plist */,
 				ACCEA250165FAC1500BC3BB8 /* InfoPlist.strings */,
 				ACCEA253165FAC1500BC3BB8 /* main.m */,
@@ -232,6 +259,10 @@
 				ACCEA25C165FAC1500BC3BB8 /* Default@2x.png in Resources */,
 				ACCEA25E165FAC1500BC3BB8 /* Default-568h@2x.png in Resources */,
 				AC88AC97166286DB000D05F0 /* MainWindow.xib in Resources */,
+				AC88ACFA1662AA7E000D05F0 /* PTGroupsViewController.xib in Resources */,
+				AC88ACFF1662AB8E000D05F0 /* PTPeopleViewController.xib in Resources */,
+				AC88AD061662B4A1000D05F0 /* groups.png in Resources */,
+				AC88AD0C16639BA2000D05F0 /* users.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +299,9 @@
 			files = (
 				ACCEA254165FAC1500BC3BB8 /* main.m in Sources */,
 				ACCEA258165FAC1500BC3BB8 /* PTAppDelegate.m in Sources */,
+				AC88ACF91662AA7E000D05F0 /* PTGroupsViewController.m in Sources */,
+				AC88ACFE1662AB8E000D05F0 /* PTPeopleViewController.m in Sources */,
+				AC88AD041662AD20000D05F0 /* PTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

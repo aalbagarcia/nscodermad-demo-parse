@@ -7,17 +7,22 @@
 //
 
 #import "PTAppDelegate.h"
-
+#import "PTViewController.h"
+#import "PTGroupsViewController.h"
+#import "PTPeopleViewController.h"
 @implementation PTAppDelegate
-
-/*- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    PTGroupsViewController *groupsVC = [[PTGroupsViewController alloc] initWithNibName:@"PTGroupsViewController" bundle:nil];
+    PTPeopleViewController *peopleVC = [[PTPeopleViewController alloc] initWithNibName:@"PTPeopleViewController" bundle:nil];
+    
+    self.viewController = [[PTViewController alloc] init];
+    self.viewController.viewControllers = @[groupsVC, peopleVC];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
-}*/
+ 
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
