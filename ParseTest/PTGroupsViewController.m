@@ -7,6 +7,7 @@
 //
 
 #import "PTGroupsViewController.h"
+#import "PTAddGroupViewController.h"
 
 @interface PTGroupsViewController ()
 
@@ -24,7 +25,7 @@
         groups = [NSArray arrayWithObjects:@"grupo1",@"grupo2", nil];
         self.title = @"Groups";
         self.tabBarItem.image = [UIImage imageNamed:@"groups"];
-        UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"circle_plus.png"] style:UIBarButtonSystemItemAdd target:self action:@selector(addGroup)];
+        UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGroup)];
         self.navigationItem.rightBarButtonItem = addGroupButton;
 
     }
@@ -58,5 +59,6 @@
 - (void) addGroup
 {
     NSLog(@"Add group button pressed");
+    [self.navigationController pushViewController:[[PTAddGroupViewController alloc] init] animated:YES];
 }
 @end
