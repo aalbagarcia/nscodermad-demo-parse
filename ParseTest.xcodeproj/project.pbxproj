@@ -11,7 +11,6 @@
 		AC88ACFA1662AA7E000D05F0 /* PTGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88ACF81662AA7D000D05F0 /* PTGroupsViewController.xib */; };
 		AC88ACFE1662AB8E000D05F0 /* PTPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88ACFC1662AB8E000D05F0 /* PTPeopleViewController.m */; };
 		AC88ACFF1662AB8E000D05F0 /* PTPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88ACFD1662AB8E000D05F0 /* PTPeopleViewController.xib */; };
-		AC88AD041662AD20000D05F0 /* PTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88AD031662AD20000D05F0 /* PTViewController.m */; };
 		AC88AD061662B4A1000D05F0 /* groups.png in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD051662B4A1000D05F0 /* groups.png */; };
 		AC88AD0C16639BA2000D05F0 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD0B16639BA2000D05F0 /* users.png */; };
 		AC88AD0E1663AF29000D05F0 /* StandardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD0D1663AF29000D05F0 /* StandardTableViewCell.xib */; };
@@ -22,7 +21,6 @@
 		ACBB31C316657EF800078139 /* wallpaper-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31C216657EF800078139 /* wallpaper-568h@2x.jpg */; };
 		ACBB31C61665808100078139 /* wallpaper@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31C41665808100078139 /* wallpaper@2x.jpg */; };
 		ACBB31C71665808100078139 /* wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31C51665808100078139 /* wallpaper.png */; };
-		ACBB31C916658BA000078139 /* PTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31C816658BA000078139 /* PTViewController.xib */; };
 		ACBB31CF16658DBB00078139 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31CE16658DBB00078139 /* MainWindow.xib */; };
 		ACCEA248165FAC1500BC3BB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEA247165FAC1500BC3BB8 /* UIKit.framework */; };
 		ACCEA24A165FAC1500BC3BB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCEA249165FAC1500BC3BB8 /* Foundation.framework */; };
@@ -57,8 +55,6 @@
 		AC88ACFB1662AB8E000D05F0 /* PTPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPeopleViewController.h; sourceTree = "<group>"; };
 		AC88ACFC1662AB8E000D05F0 /* PTPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTPeopleViewController.m; sourceTree = "<group>"; };
 		AC88ACFD1662AB8E000D05F0 /* PTPeopleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTPeopleViewController.xib; sourceTree = "<group>"; };
-		AC88AD021662AD20000D05F0 /* PTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTViewController.h; path = ../PTViewController.h; sourceTree = "<group>"; };
-		AC88AD031662AD20000D05F0 /* PTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTViewController.m; path = ../PTViewController.m; sourceTree = "<group>"; };
 		AC88AD051662B4A1000D05F0 /* groups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groups.png; path = ../groups.png; sourceTree = "<group>"; };
 		AC88AD0B16639BA2000D05F0 /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
 		AC88AD0D1663AF29000D05F0 /* StandardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandardTableViewCell.xib; sourceTree = "<group>"; };
@@ -71,7 +67,6 @@
 		ACBB31C216657EF800078139 /* wallpaper-568h@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wallpaper-568h@2x.jpg"; sourceTree = "<group>"; };
 		ACBB31C41665808100078139 /* wallpaper@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wallpaper@2x.jpg"; sourceTree = "<group>"; };
 		ACBB31C51665808100078139 /* wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper.png; sourceTree = "<group>"; };
-		ACBB31C816658BA000078139 /* PTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTViewController.xib; sourceTree = "<group>"; };
 		ACBB31CE16658DBB00078139 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		ACCEA243165FAC1500BC3BB8 /* ParseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCEA247165FAC1500BC3BB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -151,9 +146,6 @@
 		ACCEA24D165FAC1500BC3BB8 /* ParseTest */ = {
 			isa = PBXGroup;
 			children = (
-				AC88AD021662AD20000D05F0 /* PTViewController.h */,
-				AC88AD031662AD20000D05F0 /* PTViewController.m */,
-				ACBB31C816658BA000078139 /* PTViewController.xib */,
 				ACCEA256165FAC1500BC3BB8 /* PTAppDelegate.h */,
 				ACCEA257165FAC1500BC3BB8 /* PTAppDelegate.m */,
 				ACCEA24E165FAC1500BC3BB8 /* Supporting Files */,
@@ -299,7 +291,6 @@
 				ACBB31C316657EF800078139 /* wallpaper-568h@2x.jpg in Resources */,
 				ACBB31C61665808100078139 /* wallpaper@2x.jpg in Resources */,
 				ACBB31C71665808100078139 /* wallpaper.png in Resources */,
-				ACBB31C916658BA000078139 /* PTViewController.xib in Resources */,
 				ACBB31CF16658DBB00078139 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +330,6 @@
 				ACCEA258165FAC1500BC3BB8 /* PTAppDelegate.m in Sources */,
 				AC88ACF91662AA7E000D05F0 /* PTGroupsViewController.m in Sources */,
 				AC88ACFE1662AB8E000D05F0 /* PTPeopleViewController.m in Sources */,
-				AC88AD041662AD20000D05F0 /* PTViewController.m in Sources */,
 				AC88AD1C1663F778000D05F0 /* PTGroupsNavController.m in Sources */,
 				ACBB31BF16657AB500078139 /* PTAddGroupViewController.m in Sources */,
 			);

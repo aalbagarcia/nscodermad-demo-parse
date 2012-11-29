@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class PTViewController;
+@class PTGroupsNavController;
 
 @interface PTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
-@property (strong, nonatomic) PTViewController *viewController;
+@property (strong, nonatomic) IBOutlet UITabBarController *tabBarController;
 
 @end

@@ -21,21 +21,27 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self.tableView registerNib:[UINib nibWithNibName:@"StandardTableViewCell" bundle:nil] forCellReuseIdentifier:@"StandardCell"];
-        groups = [NSArray arrayWithObjects:@"grupo1",@"grupo2", nil];
-        self.title = @"Groups";
-        self.tabBarItem.image = [UIImage imageNamed:@"groups"];
-        UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGroup)];
-        self.navigationItem.rightBarButtonItem = addGroupButton;
-
     }
     return self;
+}
+
+- (void) initializacion
+{
+    [self.tableView registerNib:[UINib nibWithNibName:@"StandardTableViewCell" bundle:nil] forCellReuseIdentifier:@"StandardCell"];
+    groups = [NSArray arrayWithObjects:@"grupo1",@"grupo2", nil];
+    self.title = @"Groups";
+    self.tabBarItem.image = [UIImage imageNamed:@"groups"];
+    UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGroup)];
+    self.navigationItem.rightBarButtonItem = addGroupButton;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self initializacion];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

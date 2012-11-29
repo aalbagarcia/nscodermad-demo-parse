@@ -7,7 +7,6 @@
 //
 
 #import "PTAppDelegate.h"
-#import "PTViewController.h"
 #import "PTGroupsViewController.h"
 #import "PTPeopleViewController.h"
 @implementation PTAppDelegate
@@ -18,10 +17,12 @@
  
     self.viewController.viewControllers = @[groupsVC, peopleVC];
     self.window.rootViewController = self.viewController;
-*/
+
     
-    self.viewController = [[PTViewController alloc] init];
-    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+ 
+ */
+    [self.window addSubview:[self.tabBarController view]];
     [self.window makeKeyAndVisible];
     return YES;
  
