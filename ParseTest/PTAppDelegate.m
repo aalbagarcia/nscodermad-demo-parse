@@ -9,6 +9,8 @@
 #import "PTAppDelegate.h"
 #import "PTGroupsViewController.h"
 #import "PTPeopleViewController.h"
+#import <Parse/Parse.h>
+#import "ParseKey.h"
 @implementation PTAppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -22,6 +24,11 @@
     [self.window makeKeyAndVisible];
  
  */
+    [Parse setApplicationId:PARSE_APPLICATION_ID
+                  clientKey:PARSE_CLIENT_KEY];
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
     [self.window addSubview:[self.tabBarController view]];
     [self.window makeKeyAndVisible];
     return YES;
