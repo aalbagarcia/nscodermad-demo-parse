@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSArray *groups;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (strong, nonatomic) id<PTGroupDataSourceProtocol> delegate;
+@property (strong, nonatomic) id<PTGroupCRUDDelegateProtocol> delegate;
 
 - (IBAction)saveGroup:(UIButton *)sender;
 @end

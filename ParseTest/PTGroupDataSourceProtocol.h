@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol PTGroupDataSourceProtocol <NSObject>
+@protocol PTGroupCRUDDelegateProtocol <NSObject>
 
 @required
 - (void) addGroup:(NSString *)group;
