@@ -24,15 +24,17 @@
     [self.window makeKeyAndVisible];
  
  */
-    [Parse setApplicationId:PARSE_APPLICATION_ID
-                  clientKey:PARSE_CLIENT_KEY];
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    [testObject setObject:@"bar" forKey:@"foo"];
-    [testObject save];
+
     [self.window addSubview:[self.tabBarController view]];
     [self.window makeKeyAndVisible];
     return YES;
  
+}
+
+-(void)awakeFromNib
+{
+    [Parse setApplicationId:PARSE_APPLICATION_ID
+                  clientKey:PARSE_CLIENT_KEY];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

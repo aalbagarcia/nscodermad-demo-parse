@@ -8,7 +8,7 @@
 
 #import "PTGroupsViewController.h"
 #import "PTAddGroupViewController.h"
-
+#import <Parse/Parse.h>
 @interface PTGroupsViewController ()
 
 @end
@@ -25,10 +25,10 @@
     return self;
 }
 
-- (void) initializacion
+- (void) initialization
 {
     [self.tableView registerNib:[UINib nibWithNibName:@"StandardTableViewCell" bundle:nil] forCellReuseIdentifier:@"StandardCell"];
-    groups = [NSArray arrayWithObjects:@"grupo1",@"grupo2", nil];
+    [self getGroups];
     self.title = @"Groups";
     self.tabBarItem.image = [UIImage imageNamed:@"groups"];
     UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGroupAction)];
@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self initializacion];
+    [self initialization];
     
     
 }
@@ -57,7 +57,8 @@
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StandardCell" forIndexPath:indexPath];
-    cell.textLabel.text = [groups objectAtIndex:indexPath.row];
+    PFObject *group = [groups objectAtIndex:indexPath.row];
+    cell.textLabel.text = [group objectForKey:@"name"];
     cell.detailTextLabel.text = @"";
     return cell;
 }
@@ -74,9 +75,19 @@
 #pragma mark PTGroupDataSourceProtocol
 -(void) addGroup:(NSString *)group
 {
-    NSMutableArray *newGroups = [groups mutableCopy];
-    [newGroups addObject:group];
-    groups = [[NSArray alloc] initWithArray:newGroups];
+    PFObject *newGroup = [PFObject objectWithClassName:@"Group"];
+    [newGroup setObject:group forKey:@"name"];
+    [newGroup save];
+    [self getGroups];
+    NSLog(@"Saving group %@", group);
     [self.tableView reloadData];
+    
+}
+
+#pragma mark Parse Related Functions
+- (void) getGroups
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Group"];
+    groups = [query findObjects];
 }
 @end
