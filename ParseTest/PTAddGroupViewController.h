@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTGroupDataSourceProtocol.h"
+@interface PTAddGroupViewController : UIViewController <UITextFieldDelegate>
 
-@interface PTAddGroupViewController : UIViewController
+@property (nonatomic, strong) NSArray *groups;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) id<PTGroupDataSourceProtocol> delegate;
 
+- (IBAction)saveGroup:(UIButton *)sender;
 @end

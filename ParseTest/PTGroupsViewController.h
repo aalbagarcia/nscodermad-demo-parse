@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface PTGroupsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+#import "PTGroupDataSourceProtocol.h"
+@interface PTGroupsViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, PTGroupDataSourceProtocol>
 
 @end

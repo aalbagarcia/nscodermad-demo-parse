@@ -31,8 +31,9 @@
     groups = [NSArray arrayWithObjects:@"grupo1",@"grupo2", nil];
     self.title = @"Groups";
     self.tabBarItem.image = [UIImage imageNamed:@"groups"];
-    UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGroup)];
+    UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGroupAction)];
     self.navigationItem.rightBarButtonItem = addGroupButton;
+
 }
 
 - (void)viewDidLoad
@@ -62,9 +63,20 @@
 }
 
 
-- (void) addGroup
+- (void) addGroupAction
 {
     NSLog(@"Add group button pressed");
-    [self.navigationController pushViewController:[[PTAddGroupViewController alloc] init] animated:YES];
+    PTAddGroupViewController *addGroupViewController = [[PTAddGroupViewController alloc] init];
+    addGroupViewController.delegate = self;
+    [self.navigationController pushViewController:addGroupViewController  animated:YES];
+}
+
+#pragma mark PTGroupDataSourceProtocol
+-(void) addGroup:(NSString *)group
+{
+    NSMutableArray *newGroups = [groups mutableCopy];
+    [newGroups addObject:group];
+    groups = [[NSArray alloc] initWithArray:newGroups];
+    [self.tableView reloadData];
 }
 @end

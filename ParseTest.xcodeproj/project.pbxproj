@@ -68,6 +68,7 @@
 		ACBB31C41665808100078139 /* wallpaper@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wallpaper@2x.jpg"; sourceTree = "<group>"; };
 		ACBB31C51665808100078139 /* wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper.png; sourceTree = "<group>"; };
 		ACBB31CE16658DBB00078139 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		ACC05AFD166A55F400C4624E /* PTGroupDataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGroupDataSourceProtocol.h; sourceTree = "<group>"; };
 		ACCEA243165FAC1500BC3BB8 /* ParseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCEA247165FAC1500BC3BB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACCEA249165FAC1500BC3BB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,6 +162,7 @@
 				AC88ACFD1662AB8E000D05F0 /* PTPeopleViewController.xib */,
 				AC88AD1A1663F778000D05F0 /* PTGroupsNavController.h */,
 				AC88AD1B1663F778000D05F0 /* PTGroupsNavController.m */,
+				ACC05AFD166A55F400C4624E /* PTGroupDataSourceProtocol.h */,
 			);
 			path = ParseTest;
 			sourceTree = "<group>";

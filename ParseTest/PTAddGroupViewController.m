@@ -37,4 +37,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark UITextFieldDelegate
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    NSLog(@"In textFieldShouldReturn");
+    return YES;
+}
+
+-(BOOL) textFieldShouldBeginEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    NSLog(@"In textFieldShouldBeginEditing");
+    return YES;
+}
+
+- (IBAction)saveGroup:(UIButton *)sender {
+    [self.delegate addGroup:self.textField.text];
+    [self.textField resignFirstResponder];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
