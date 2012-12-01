@@ -28,7 +28,7 @@
 - (void) initialization
 {
     [self.tableView registerNib:[UINib nibWithNibName:@"StandardTableViewCell" bundle:nil] forCellReuseIdentifier:@"StandardCell"];
-    [self getGroups];
+    [self getGroupsAndReloadDataInBackground];
     self.title = @"Groups";
     self.tabBarItem.image = [UIImage imageNamed:@"groups"];
     UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGroupAction)];
@@ -77,11 +77,16 @@
 {
     PFObject *newGroup = [PFObject objectWithClassName:@"Group"];
     [newGroup setObject:group forKey:@"name"];
-    [newGroup save];
-    [self getGroups];
+    [newGroup saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self getGroupsAndReloadDataInBackground];
+            });
+            
+        }
+    }];
     NSLog(@"Saving group %@", group);
-    [self.tableView reloadData];
-    
 }
 
 #pragma mark Parse Related Functions
@@ -89,5 +94,21 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Group"];
     groups = [query findObjects];
+}
+
+- (void) getGroupsAndReloadDataInBackground
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Group"];
+    [query orderByAscending:@"name"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error)
+        {
+            groups = objects;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }
+    }];
+    
 }
 @end
