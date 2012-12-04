@@ -31,7 +31,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"StandardTableViewCell" bundle:nil] forCellReuseIdentifier:@"StandardCell"];
     [self getGroupsAndReloadDataInBackground];
     self.title = @"Groups";
-    self.tabBarItem.image = [UIImage imageNamed:@"groups"];
     UIBarButtonItem *addGroupButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGroupAction)];
     self.navigationItem.rightBarButtonItem = addGroupButton;
 
