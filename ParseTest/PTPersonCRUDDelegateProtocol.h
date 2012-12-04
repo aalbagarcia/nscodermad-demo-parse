@@ -10,4 +10,8 @@
 
 @protocol PTPersonCRUDDelegateProtocol <NSObject>
 
+@required
+- (void) addPerson:(NSDictionary *)data;
+
+
 @end

@@ -52,27 +52,16 @@
 }
 
 
+
 #pragma mark Actions
 - (void) savePersonAction:(id)sender
 {
     NSLog(@"Saving person");
-    PFObject *person = [PFObject objectWithClassName:@"Person"];
-    [person setObject:self.firstNameTextField.text forKey:@"firstName"];
-    [person setObject:self.lastNameTextField.text forKey:@"lastName"];
-    [person setObject:self.emailTextField.text forKey:@"email"];
-    [person setObject:self.twitterTextField.text forKey:@"twitter"];
-    [person saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(succeeded)
-        {
-            dispatch_async(dispatch_get_main_queue(),^{
-                [self.navigationController popViewControllerAnimated:YES];
-            });
-        }
-        else
-        {
-            NSLog(@"Person could not be saved.");
-        }
-    }];
+    NSArray *objects = [NSArray arrayWithObjects:self.firstNameTextField.text, self.lastNameTextField.text, self.emailTextField.text, self.twitterTextField.text, nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"firstName",@"lastName",@"email",@"twitter", nil];
+    NSDictionary *data = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    [self.delegate addPerson:data];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) dismissKeyboard

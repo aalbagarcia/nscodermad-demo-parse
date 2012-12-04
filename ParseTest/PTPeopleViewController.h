@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface PTPeopleViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+#import "PTPersonCRUDDelegateProtocol.h"
+@interface PTPeopleViewController : UITableViewController <PTPersonCRUDDelegateProtocol>
 
 @end

@@ -18,6 +18,7 @@
 		AC88AD2216643895000D05F0 /* circle_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD2116643895000D05F0 /* circle_plus.png */; };
 		AC98FB67166E25A900912246 /* PTAddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC98FB65166E25A900912246 /* PTAddPersonViewController.m */; };
 		AC98FB6A166E2AE700912246 /* PTAddPersonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98FB69166E2AE700912246 /* PTAddPersonViewController.storyboard */; };
+		AC98FB6C166E4EFB00912246 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC98FB6B166E4EFB00912246 /* PersonTableViewCell.xib */; };
 		ACBB31BF16657AB500078139 /* PTAddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB31BD16657AB500078139 /* PTAddGroupViewController.m */; };
 		ACBB31C016657AB500078139 /* PTAddGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31BE16657AB500078139 /* PTAddGroupViewController.xib */; };
 		ACBB31C316657EF800078139 /* wallpaper-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31C216657EF800078139 /* wallpaper-568h@2x.jpg */; };
@@ -81,6 +82,8 @@
 		AC98FB64166E25A900912246 /* PTAddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAddPersonViewController.h; sourceTree = "<group>"; };
 		AC98FB65166E25A900912246 /* PTAddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAddPersonViewController.m; sourceTree = "<group>"; };
 		AC98FB69166E2AE700912246 /* PTAddPersonViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PTAddPersonViewController.storyboard; sourceTree = "<group>"; };
+		AC98FB6B166E4EFB00912246 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		AC98FB6D166E552D00912246 /* PTPersonCRUDDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPersonCRUDDelegateProtocol.h; sourceTree = "<group>"; };
 		ACBB31BC16657AB500078139 /* PTAddGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAddGroupViewController.h; sourceTree = "<group>"; };
 		ACBB31BD16657AB500078139 /* PTAddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAddGroupViewController.m; sourceTree = "<group>"; };
 		ACBB31BE16657AB500078139 /* PTAddGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTAddGroupViewController.xib; sourceTree = "<group>"; };
@@ -88,7 +91,7 @@
 		ACBB31C41665808100078139 /* wallpaper@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wallpaper@2x.jpg"; sourceTree = "<group>"; };
 		ACBB31C51665808100078139 /* wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper.png; sourceTree = "<group>"; };
 		ACBB31CE16658DBB00078139 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		ACC05AFD166A55F400C4624E /* PTGroupDataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGroupDataSourceProtocol.h; sourceTree = "<group>"; };
+		ACC05AFD166A55F400C4624E /* PTGroupCRUDDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGroupCRUDDelegateProtocol.h; sourceTree = "<group>"; };
 		ACC05AFF166A5CFC00C4624E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		ACC05B02166A5DAE00C4624E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		ACC05B04166A5DFB00C4624E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -222,15 +225,17 @@
 				ACBB31BD16657AB500078139 /* PTAddGroupViewController.m */,
 				ACBB31BE16657AB500078139 /* PTAddGroupViewController.xib */,
 				AC88AD0D1663AF29000D05F0 /* StandardTableViewCell.xib */,
+				AC98FB6B166E4EFB00912246 /* PersonTableViewCell.xib */,
 				AC88ACFB1662AB8E000D05F0 /* PTPeopleViewController.h */,
 				AC88ACFC1662AB8E000D05F0 /* PTPeopleViewController.m */,
 				AC88ACFD1662AB8E000D05F0 /* PTPeopleViewController.xib */,
 				AC88AD1A1663F778000D05F0 /* PTGroupsNavController.h */,
 				AC88AD1B1663F778000D05F0 /* PTGroupsNavController.m */,
-				ACC05AFD166A55F400C4624E /* PTGroupDataSourceProtocol.h */,
+				ACC05AFD166A55F400C4624E /* PTGroupCRUDDelegateProtocol.h */,
 				AC98FB64166E25A900912246 /* PTAddPersonViewController.h */,
 				AC98FB65166E25A900912246 /* PTAddPersonViewController.m */,
 				AC98FB69166E2AE700912246 /* PTAddPersonViewController.storyboard */,
+				AC98FB6D166E552D00912246 /* PTPersonCRUDDelegateProtocol.h */,
 			);
 			path = ParseTest;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				ACBB31C71665808100078139 /* wallpaper.png in Resources */,
 				ACBB31CF16658DBB00078139 /* MainWindow.xib in Resources */,
 				AC98FB6A166E2AE700912246 /* PTAddPersonViewController.storyboard in Resources */,
+				AC98FB6C166E4EFB00912246 /* PersonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

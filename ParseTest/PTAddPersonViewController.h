@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PTPersonCRUDDelegateProtocol.h"
 @interface PTAddPersonViewController : UITableViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *twitterTextField;
+
+@property (strong, nonatomic) id<PTPersonCRUDDelegateProtocol> delegate;
 
 @end
