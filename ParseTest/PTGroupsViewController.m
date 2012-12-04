@@ -9,6 +9,8 @@
 #import "PTGroupsViewController.h"
 #import "PTAddGroupViewController.h"
 #import "PTAppDelegate.h"
+#import "PTGroupDetailViewController.h"
+#import "PTGroupDetailNameTableViewCell.h"
 #import <Parse/Parse.h>
 @interface PTGroupsViewController ()
 
@@ -59,11 +61,25 @@
 }
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StandardCell" forIndexPath:indexPath];
     PFObject *group = [groups objectAtIndex:indexPath.row];
     cell.textLabel.text = [group objectForKey:@"name"];
     cell.detailTextLabel.text = @"";
     return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    PTGroupDetailViewController *detail = [[PTGroupDetailViewController alloc] init];
+    PFObject *group = [groups objectAtIndex:indexPath.row];
+    detail.group =group;
+    detail.title = [group objectForKey:@"name"];
+    
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 -(BOOL) tableView:(UITableView *)tableView canDeleteRowAtIndexPath:(NSIndexPath *)indexPath

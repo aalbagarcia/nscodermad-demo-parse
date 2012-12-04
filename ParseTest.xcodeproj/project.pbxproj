@@ -18,6 +18,11 @@
 		AC98FB67166E25A900912246 /* PTAddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC98FB65166E25A900912246 /* PTAddPersonViewController.m */; };
 		AC98FB6A166E2AE700912246 /* PTAddPersonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98FB69166E2AE700912246 /* PTAddPersonViewController.storyboard */; };
 		AC98FB6C166E4EFB00912246 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC98FB6B166E4EFB00912246 /* PersonTableViewCell.xib */; };
+		AC98FBA7166E806C00912246 /* PTGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC98FBA5166E806B00912246 /* PTGroupDetailViewController.m */; };
+		AC98FBA8166E806C00912246 /* PTGroupDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC98FBA6166E806C00912246 /* PTGroupDetailViewController.xib */; };
+		AC98FBAB166E869700912246 /* PTGroupDetailNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC98FBAA166E869700912246 /* PTGroupDetailNameTableViewCell.m */; };
+		AC98FBAD166E8A2D00912246 /* GroupDetailNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC98FBAC166E8A2C00912246 /* GroupDetailNameCell.xib */; };
+		AC98FBAF166E98DB00912246 /* GroupDetailMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC98FBAE166E98DB00912246 /* GroupDetailMemberCell.xib */; };
 		ACBB31BF16657AB500078139 /* PTAddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB31BD16657AB500078139 /* PTAddGroupViewController.m */; };
 		ACBB31C016657AB500078139 /* PTAddGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31BE16657AB500078139 /* PTAddGroupViewController.xib */; };
 		ACBB31C316657EF800078139 /* wallpaper-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31C216657EF800078139 /* wallpaper-568h@2x.jpg */; };
@@ -82,6 +87,13 @@
 		AC98FB69166E2AE700912246 /* PTAddPersonViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PTAddPersonViewController.storyboard; sourceTree = "<group>"; };
 		AC98FB6B166E4EFB00912246 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		AC98FB6D166E552D00912246 /* PTPersonCRUDDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPersonCRUDDelegateProtocol.h; sourceTree = "<group>"; };
+		AC98FBA4166E806B00912246 /* PTGroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGroupDetailViewController.h; sourceTree = "<group>"; };
+		AC98FBA5166E806B00912246 /* PTGroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGroupDetailViewController.m; sourceTree = "<group>"; };
+		AC98FBA6166E806C00912246 /* PTGroupDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTGroupDetailViewController.xib; sourceTree = "<group>"; };
+		AC98FBA9166E869700912246 /* PTGroupDetailNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGroupDetailNameTableViewCell.h; sourceTree = "<group>"; };
+		AC98FBAA166E869700912246 /* PTGroupDetailNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGroupDetailNameTableViewCell.m; sourceTree = "<group>"; };
+		AC98FBAC166E8A2C00912246 /* GroupDetailNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupDetailNameCell.xib; sourceTree = "<group>"; };
+		AC98FBAE166E98DB00912246 /* GroupDetailMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupDetailMemberCell.xib; sourceTree = "<group>"; };
 		ACBB31BC16657AB500078139 /* PTAddGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAddGroupViewController.h; sourceTree = "<group>"; };
 		ACBB31BD16657AB500078139 /* PTAddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAddGroupViewController.m; sourceTree = "<group>"; };
 		ACBB31BE16657AB500078139 /* PTAddGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTAddGroupViewController.xib; sourceTree = "<group>"; };
@@ -222,6 +234,13 @@
 				ACBB31BC16657AB500078139 /* PTAddGroupViewController.h */,
 				ACBB31BD16657AB500078139 /* PTAddGroupViewController.m */,
 				ACBB31BE16657AB500078139 /* PTAddGroupViewController.xib */,
+				AC98FBA4166E806B00912246 /* PTGroupDetailViewController.h */,
+				AC98FBA5166E806B00912246 /* PTGroupDetailViewController.m */,
+				AC98FBA6166E806C00912246 /* PTGroupDetailViewController.xib */,
+				AC98FBA9166E869700912246 /* PTGroupDetailNameTableViewCell.h */,
+				AC98FBAA166E869700912246 /* PTGroupDetailNameTableViewCell.m */,
+				AC98FBAC166E8A2C00912246 /* GroupDetailNameCell.xib */,
+				AC98FBAE166E98DB00912246 /* GroupDetailMemberCell.xib */,
 				AC88AD0D1663AF29000D05F0 /* StandardTableViewCell.xib */,
 				AC98FB6B166E4EFB00912246 /* PersonTableViewCell.xib */,
 				AC88ACFB1662AB8E000D05F0 /* PTPeopleViewController.h */,
@@ -367,6 +386,9 @@
 				ACBB31CF16658DBB00078139 /* MainWindow.xib in Resources */,
 				AC98FB6A166E2AE700912246 /* PTAddPersonViewController.storyboard in Resources */,
 				AC98FB6C166E4EFB00912246 /* PersonTableViewCell.xib in Resources */,
+				AC98FBA8166E806C00912246 /* PTGroupDetailViewController.xib in Resources */,
+				AC98FBAD166E8A2D00912246 /* GroupDetailNameCell.xib in Resources */,
+				AC98FBAF166E98DB00912246 /* GroupDetailMemberCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +430,8 @@
 				AC88AD1C1663F778000D05F0 /* PTGroupsNavController.m in Sources */,
 				ACBB31BF16657AB500078139 /* PTAddGroupViewController.m in Sources */,
 				AC98FB67166E25A900912246 /* PTAddPersonViewController.m in Sources */,
+				AC98FBA7166E806C00912246 /* PTGroupDetailViewController.m in Sources */,
+				AC98FBAB166E869700912246 /* PTGroupDetailNameTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
