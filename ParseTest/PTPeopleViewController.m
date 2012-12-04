@@ -18,17 +18,21 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"People";
-        self.tabBarItem.image = [UIImage imageNamed:@"users"];
-        
+
     }
     return self;
+}
+
+- (void) initializacion
+{
+    self.title = @"People";
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self initializacion];
 }
 
 - (void)didReceiveMemoryWarning
