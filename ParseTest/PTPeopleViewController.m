@@ -26,6 +26,8 @@
 - (void) initializacion
 {
     self.title = @"People";
+    UIBarButtonItem *addPersonButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPersonAction:)];
+    self.navigationItem.rightBarButtonItem = addPersonButton;
 }
 
 - (void)viewDidLoad
@@ -41,4 +43,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) addPersonAction:(id) sender
+{
+    NSLog(@"Add person pressed");
+}
 @end
