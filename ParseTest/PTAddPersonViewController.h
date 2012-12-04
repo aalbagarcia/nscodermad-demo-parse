@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PTPersonCRUDDelegateProtocol.h"
-@interface PTAddPersonViewController : UITableViewController <UITextFieldDelegate>
+@interface PTAddPersonViewController : UITableViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *twitterTextField;
 
 @property (strong, nonatomic) id<PTPersonCRUDDelegateProtocol> delegate;
+@property (weak, nonatomic) IBOutlet UIPickerView *groupPicker;
+
+@property (strong, nonatomic) NSArray *groups;
 
 @end

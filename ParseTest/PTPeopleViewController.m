@@ -13,6 +13,7 @@
 @interface PTPeopleViewController ()
 {
     NSArray *people;
+    NSArray *groups;
 }
 @end
 
@@ -72,7 +73,6 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Person"];
     [query orderByAscending:@"firstName"];
-    [query orderByAscending:@"lastName"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error)
         {
@@ -82,6 +82,7 @@
             });
         }
     }];
+    
 }
 
 #pragma mark Actions
@@ -92,31 +93,44 @@
     UIStoryboard *tableViewStoryboard = [UIStoryboard storyboardWithName:@"PTAddPersonViewController" bundle:nil];
     PTAddPersonViewController *viewController = [tableViewStoryboard instantiateViewControllerWithIdentifier:@"PTAddPersonViewController"];
     viewController.delegate = self;
-    [self.navigationController pushViewController:viewController animated:YES];
+    PFQuery *groupsQuery = [PFQuery queryWithClassName:@"Group"];
+    [groupsQuery orderByAscending:@"name"];
+    [groupsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        groups = objects;
+        viewController.groups = groups;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }];
+
 }
 
 #pragma mark PTPersonCRUDDelegateProtocol
 
 - (void) addPerson:(NSDictionary *)data
 {
+    PFObject *group = [data objectForKey:@"group"];
     PFObject *person = [PFObject objectWithClassName:@"Person"];
     [person setObject:[data objectForKey:@"firstName"] forKey:@"firstName"];
     [person setObject:[data objectForKey:@"lastName"] forKey:@"lastName"];
     [person setObject:[data objectForKey:@"email"] forKey:@"email"];
     [person setObject:[data objectForKey:@"twitter"] forKey:@"twitter"];
-    
+    PFRelation *memberOf = [person relationforKey:@"memberOf"];
+    [memberOf addObject:group];
     [person saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded)
         {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self loadDataInBackground];
             });
+            
+            //We cannot create the inverse relation until the object is saved
+            PFRelation *relation = [group relationforKey:@"members"];
+            [relation addObject:person];
+            [group saveInBackground];
         }
         else
         {
             NSLog(@"Person could not be saved.");
         }
     }];
-    
 }
 @end
