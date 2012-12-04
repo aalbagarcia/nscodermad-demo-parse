@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PTGroupDataSourceProtocol.h"
+#import "PTGroupCRUDDelegateProtocol.h"
 @interface PTAddGroupViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSArray *groups;
