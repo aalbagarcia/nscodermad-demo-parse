@@ -46,5 +46,8 @@
 - (void) addPersonAction:(id) sender
 {
     NSLog(@"Add person pressed");
+    UIStoryboard *tableViewStoryboard = [UIStoryboard storyboardWithName:@"PTAddPersonViewController" bundle:nil];
+    PTPeopleViewController *viewController = [tableViewStoryboard instantiateViewControllerWithIdentifier:@"PTAddPersonViewController"];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 @end

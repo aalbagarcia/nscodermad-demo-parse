@@ -16,6 +16,8 @@
 		AC88AD0E1663AF29000D05F0 /* StandardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD0D1663AF29000D05F0 /* StandardTableViewCell.xib */; };
 		AC88AD1C1663F778000D05F0 /* PTGroupsNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88AD1B1663F778000D05F0 /* PTGroupsNavController.m */; };
 		AC88AD2216643895000D05F0 /* circle_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = AC88AD2116643895000D05F0 /* circle_plus.png */; };
+		AC98FB67166E25A900912246 /* PTAddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC98FB65166E25A900912246 /* PTAddPersonViewController.m */; };
+		AC98FB6A166E2AE700912246 /* PTAddPersonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC98FB69166E2AE700912246 /* PTAddPersonViewController.storyboard */; };
 		ACBB31BF16657AB500078139 /* PTAddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBB31BD16657AB500078139 /* PTAddGroupViewController.m */; };
 		ACBB31C016657AB500078139 /* PTAddGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31BE16657AB500078139 /* PTAddGroupViewController.xib */; };
 		ACBB31C316657EF800078139 /* wallpaper-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACBB31C216657EF800078139 /* wallpaper-568h@2x.jpg */; };
@@ -76,6 +78,9 @@
 		AC88AD1A1663F778000D05F0 /* PTGroupsNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGroupsNavController.h; sourceTree = "<group>"; };
 		AC88AD1B1663F778000D05F0 /* PTGroupsNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTGroupsNavController.m; sourceTree = "<group>"; };
 		AC88AD2116643895000D05F0 /* circle_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_plus.png; sourceTree = "<group>"; };
+		AC98FB64166E25A900912246 /* PTAddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAddPersonViewController.h; sourceTree = "<group>"; };
+		AC98FB65166E25A900912246 /* PTAddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAddPersonViewController.m; sourceTree = "<group>"; };
+		AC98FB69166E2AE700912246 /* PTAddPersonViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PTAddPersonViewController.storyboard; sourceTree = "<group>"; };
 		ACBB31BC16657AB500078139 /* PTAddGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAddGroupViewController.h; sourceTree = "<group>"; };
 		ACBB31BD16657AB500078139 /* PTAddGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAddGroupViewController.m; sourceTree = "<group>"; };
 		ACBB31BE16657AB500078139 /* PTAddGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTAddGroupViewController.xib; sourceTree = "<group>"; };
@@ -223,6 +228,9 @@
 				AC88AD1A1663F778000D05F0 /* PTGroupsNavController.h */,
 				AC88AD1B1663F778000D05F0 /* PTGroupsNavController.m */,
 				ACC05AFD166A55F400C4624E /* PTGroupDataSourceProtocol.h */,
+				AC98FB64166E25A900912246 /* PTAddPersonViewController.h */,
+				AC98FB65166E25A900912246 /* PTAddPersonViewController.m */,
+				AC98FB69166E2AE700912246 /* PTAddPersonViewController.storyboard */,
 			);
 			path = ParseTest;
 			sourceTree = "<group>";
@@ -356,6 +364,7 @@
 				ACBB31C61665808100078139 /* wallpaper@2x.jpg in Resources */,
 				ACBB31C71665808100078139 /* wallpaper.png in Resources */,
 				ACBB31CF16658DBB00078139 /* MainWindow.xib in Resources */,
+				AC98FB6A166E2AE700912246 /* PTAddPersonViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +405,7 @@
 				AC88ACFE1662AB8E000D05F0 /* PTPeopleViewController.m in Sources */,
 				AC88AD1C1663F778000D05F0 /* PTGroupsNavController.m in Sources */,
 				ACBB31BF16657AB500078139 /* PTAddGroupViewController.m in Sources */,
+				AC98FB67166E25A900912246 /* PTAddPersonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,6 +53,7 @@
     return YES;
 }
 
+#pragma mark Actions
 - (IBAction)saveGroup:(UIButton *)sender {
     [self.delegate addGroup:self.textField.text];
     [self.textField resignFirstResponder];
