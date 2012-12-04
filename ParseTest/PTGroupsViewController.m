@@ -8,6 +8,7 @@
 
 #import "PTGroupsViewController.h"
 #import "PTAddGroupViewController.h"
+#import "PTAppDelegate.h"
 #import <Parse/Parse.h>
 @interface PTGroupsViewController ()
 
@@ -45,11 +46,14 @@
     
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark UITableViewDataSourceProtocol
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [groups count];
@@ -63,6 +67,34 @@
     return cell;
 }
 
+-(BOOL) tableView:(UITableView *)tableView canDeleteRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        PFObject *group = [groups objectAtIndex:indexPath.row];
+        [group deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(succeeded & !error)
+            {
+                NSMutableArray *newGroups = [groups mutableCopy];
+                [newGroups removeObjectAtIndex:indexPath.row];
+                groups = [newGroups copy];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];                
+                });
+            }
+        }];
+    }
+}
+
+#pragma mark Actions
 
 - (void) addGroupAction
 {
